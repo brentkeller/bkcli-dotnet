@@ -7,6 +7,7 @@ app.Configure(config =>
   config.AddBranch("go", go =>
   {
     go.AddCommand<GoListCommand>("list");
+    go.AddCommand<GoToCommand>("to");
   });
   config.AddCommand<ImportCommand>("import");
 });
