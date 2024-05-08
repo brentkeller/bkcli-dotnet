@@ -1,4 +1,10 @@
-﻿using Spectre.Console;
-// See https://aka.ms/new-console-template for more information
+﻿using Bkcli.Commands;
+using Spectre.Console.Cli;
 
-AnsiConsole.Markup("[underline red]Hello[/] World!");
+var app = new CommandApp();
+app.Configure(config =>
+{
+  config.AddCommand<ImportCommand>("import");
+});
+
+return app.Run(args);
