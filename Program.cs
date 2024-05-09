@@ -6,6 +6,7 @@ app.Configure(config =>
 {
   config.AddBranch("go", go =>
   {
+    go.AddCommand<GoAddCommand>("add");
     go.AddCommand<GoListCommand>("list");
     go.AddCommand<GoToCommand>("to");
   });
