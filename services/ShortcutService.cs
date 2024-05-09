@@ -29,5 +29,20 @@ namespace Bkcli.Services
         return $"Shortcut '{name}' added successfully!";
       }
     }
+
+    public string RemoveShortcut(string name)
+    {
+      if (!Shortcuts.ContainsKey(name))
+      {
+        return $"Shortcut '{name}' was not found.";
+      }
+      else
+      {
+        Shortcuts.Remove(name);
+        SaveShortcuts();
+        return $"Shortcut '{name}' removed successfully!";
+      }
+    }
+
   }
 }

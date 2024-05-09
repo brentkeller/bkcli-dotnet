@@ -8,6 +8,7 @@ app.Configure(config =>
   {
     go.AddCommand<GoAddCommand>("add");
     go.AddCommand<GoListCommand>("list");
+    go.AddCommand<GoRemoveCommand>("remove");
     go.AddCommand<GoToCommand>("to");
   });
   config.AddCommand<ImportCommand>("import");
