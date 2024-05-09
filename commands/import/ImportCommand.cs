@@ -11,14 +11,12 @@ namespace Bkcli.Commands
   {
     public class Settings : CommandSettings
     {
-      [CommandArgument(0, "[FilePath]")]
+      [CommandArgument(0, "<FilePath>")]
       public string FilePath { get; set; } = "";
     }
 
     public override int Execute(CommandContext context, Settings settings)
     {
-      if (string.IsNullOrWhiteSpace(settings.FilePath))
-        throw new ApplicationException("File path cannot be empty");
       if (!File.Exists(settings.FilePath))
         throw new ApplicationException($"Import file not found: {settings.FilePath}");
 

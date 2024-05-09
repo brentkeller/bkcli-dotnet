@@ -9,7 +9,7 @@ namespace Bkcli.Commands
   {
     public class Settings : CommandSettings
     {
-      [CommandArgument(0, "[Name]")]
+      [CommandArgument(0, "<Name>")]
       [Description("Name of the shortcut")]
       public string Name { get; set; } = "";
     }
