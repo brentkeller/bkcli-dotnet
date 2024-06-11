@@ -21,3 +21,7 @@ examples:
 # Publishing the app
 
 The app can be built for publication using `dotnet publish -c Release`. A helper script `publish.ps1` has been written to streamline creating a publish build and copying it to a directory registered on the `PATH` environment variable.
+
+# Prior Art
+
+I ran into some hangups with the `go` feature and the idea for outputting the shortcut path for use via shell scripts was inspired by [golumbus](https://github.com/jverhoelen/golumbus) by [Jonas Verhoelen](https://github.com/jverhoelen).
