@@ -18,3 +18,6 @@ examples:
 `dotnet run import "C:\dev\data.json"`
 `dotnet run -- go audit -c`
 
+# Publishing the app
+
+The app can be built for publication using `dotnet publish -c Release`. A helper script `publish.ps1` has been written to streamline creating a publish build and copying it to a directory registered on the `PATH` environment variable.
