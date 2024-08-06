@@ -18,10 +18,11 @@ namespace Bkcli.Services
       return JsonSerializer.Deserialize<AppData>(json, _options) ?? new AppData();
     }
 
-    public static void SaveData(AppData data)
+    public static void SaveData(AppData data, string? filename = null)
     {
+      var path = filename ?? DataPath;
       var str = JsonSerializer.Serialize(data);
-      File.WriteAllText(DataPath, str);
+      File.WriteAllText(path, str);
     }
   }
 }

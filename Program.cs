@@ -12,6 +12,7 @@ app.Configure(config =>
     go.AddCommand<GoRemoveCommand>("remove");
     go.AddCommand<GoToCommand>("to");
   });
+  config.AddCommand<ExportCommand>("export");
   config.AddCommand<ImportCommand>("import");
 });
 
